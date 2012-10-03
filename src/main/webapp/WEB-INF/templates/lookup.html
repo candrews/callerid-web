@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>CallerID</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                Enter a phone number to lookup.
+                Enter the phone number as you would from a regular telephone / cell phone. You can select the country you're in, or the service will take a best guess.
+                You can also enter the phone number using international dialing rules (+country code).
+            </p>
+            <label for="country">Country you're in</label>
+            <select name="country" id="country">
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="BE">Belgium</option>
+                <option value="CA">Canada</option>
+                <option value="DK">Denmark</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="IN">India</option>
+                <option value="IT">Italy</option>
+                <option value="LU">Luxembourg</option>
+                <option value="NL">Netherlands</option>
+                <option value="PT">Portugal</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="UK">United Kingdom</option>
+                <option value="US" selected="selected">United States</option>
+            </select><br />
+            <label for="inputPhoneNumber">Phone Number: </label> <input type="tel" id="inputPhoneNumber" name="inputPhoneNumber" />
+            <input type="button" value="Lookup" id="lookup" /><img id="spinner" src="../../../resources/img/spinner.gif" th:src="@{/resources/img/spinner.gif}" style="display:none; border: 0" alt="please wait..." />
+        </form>
+        <div id="result" style="display: none">
+            <div id="name"></div>
+            <div id="company"></div>
+            <div id="address"></div>
+            <div id="phoneNumber"></div>
+        </div>
+        <div id="error" style="display: none">
+        </div>
+        <p>This service can currently get information about phone numbers in these countries:</p>
+        <ul>
+            <li>Australia</li>
+            <li>Austria</li>
+            <li>Belgium</li>
+            <li>Canada</li>
+            <li>Denmark</li>
+            <li>Finland</li>
+            <li>France</li>
+            <li>Germany</li>
+            <li>Italy</li>
+            <li>Luxembourg</li>
+            <li>Portugal</li>
+            <li>Sweden</li>
+            <li>Switzerland</li>
+            <li>United Kingdom (only geographical info)</li>
+            <li>United States</li>
+        </ul>
+        <p>This software is Free and Open Source Software under the terms of the <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a> license. Checkout the <a href="@{/resources/img/README}">readme</a> or <a href="https://gitorious.org/callerid-service">grab the source</a> for more information.</p>
+        <p><a href="http://www.integralblue.com/callerid-for-android">Check out the Android app!</a></p>
+        <script type="text/javascript" src="../../../resources/js/jquery-1.7.2.min.js" th:src="@{/resources/js/jquery-1.7.2.min.js}"></script>
+        <script type="text/javascript" src="../../../resources/js/lookup.js" th:src="@{/resources/js/lookup.js}"></script>
+    </body>
+</html>
+

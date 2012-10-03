@@ -1,0 +1,13 @@
+The CallerID service provides CallerID information given a phone number. Currently, it can access data quite a few countries. 
+Contributions for other countries/sources are welcome!
+
+Installation is simple - extract the archive, copy config.php.sample to config.php and modify config.php as desired.
+
+To use the service over HTTP:
+/callerid/callerid.php?format={FORMAT}&num={PHONENUMBER}
+where {FORMAT} can be "json" or "basic" and {PHONENUMBER} is the phone number. {PHONENUMBER} can have a leading 1 (or not) and may have punctuation in it (such as parenthesis, dashes, dots, and spaces).
+
+For example,
+https://www.integralblue.com/callerid/callerid.php?format=json&num=+1-617-542-5942
+
+Note that this software is distributed under the AGPLv3 license - see the LICENSE file.
